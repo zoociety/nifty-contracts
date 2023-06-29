@@ -1,0 +1,29 @@
+{
+  "name": "@zoociety/nifty-contracts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat clean && npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoociety/nifty-contracts.git"
+  },
+  "keywords": [
+    "solidity",
+    "smart",
+    "contracts",
+    "nft",
+    "ethereum"
+  ],
+  "author": "zoociety",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoociety/nifty-contracts/issues"
+  },
+  "homepage": "https://github.com/zoociety/nifty-contracts#readme",
+  "devDependencies": {
+    "hardhat": "^2.16.1"
+  }
+}
