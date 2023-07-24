@@ -8,3 +8,7 @@ cache
 .env
 .secrets
 .wallet.json
+
+.github
+.vscode
+/scripts
