@@ -2,8 +2,7 @@
 
 pragma solidity 0.8.7;
 
-import "@openzeppelin/contracts/utils/Base64.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
+import "./libraries/OnChainVisionMarkup.sol";
 
 contract OnChainVectorImage {
     struct VisualData {
@@ -19,48 +18,38 @@ contract OnChainVectorImage {
         mapping(uint256 => string) serial;
     }
 
-    string uriPrefix = "data:image/svg+xml;base64,";
-
     VisualData public vision;
 
     uint256 squareDimension;
 
-    constructor(uint8 _x, uint8 _y) {
-        vision.xDimension = _x;
-        vision.yDimension = _y;
-    }
+    constructor() {}
 
     function generateImage(
         uint256 tokenId
     ) public view returns (string memory) {
-        string memory encodedBytes = Base64.encode(
-            bytes(
-                abi.encodePacked(
-                    '<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">',
-                    "<style>svg {background-color:#94ff2b;} text {fill:#131313;font-weight: bold; font-family: sans-serif;}</style>",
-                    '<text x="480" y="50" font-size="30" text-anchor="end" font-weight="bold">(1)</text>'
-                )
-            )
-        );
-        return string(abi.encodePacked(uriPrefix, encodedBytes));
+        string memory content = generateDesign();
+        string memory ocvg = OCVG.init(100, "", content, "green"); // @note creates 1000 x 1000 pts environment
+        return OCVG.encode(ocvg);
     }
 
-    function generateStyle(
-        uint256 tokenId
-    ) public view returns (string memory) {
-        string memory encodedBytes = Base64.encode(
-            bytes(
-                abi.encodePacked(
-                    "<style>",
-                    "svg {background-color:",
-                    "#94ff2b",
-                    ";} text {fill:",
-                    "#131313",
-                    ";font-weight: bold; ",
-                    "font-family: sans-serif;}</style>"
-                )
-            )
+    function generateDesign() public pure returns (string memory) {
+        // creates centered title
+        string memory text = OCVG.text(
+            50, // x-coordinate
+            55, // y-coordinate
+            15, // font size
+            "middle", // alignment
+            "bold", // alignment
+            "hello", // font weight
+            "white", // font color
+            "" // extra params
         );
-        return string(abi.encodePacked(uriPrefix, encodedBytes));
+
+        return text;
+    }
+
+    function generateStyle() public pure returns (string memory) {
+        string memory style = "";
+        return style;
     }
 }
