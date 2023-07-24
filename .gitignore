@@ -1,4 +1,8 @@
 node_modules
+.github/
+.vscode/
+/.github
+/.vscode
 
 # Hardhat
 artifacts
@@ -9,6 +13,5 @@ cache
 .secrets
 .wallet.json
 
-.github
-.vscode
+
 /scripts
