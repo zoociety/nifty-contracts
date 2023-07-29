@@ -1,6 +1,6 @@
 # OnChainVision - Transforming Blockchain Tokens into Engaging Experiences
 
-**OnChainVision** is a comprehensive suite of libraries, tools, and frameworks that empower developers/creators to design and develop next-generation on-chain assets, that is *visually appealing, dynamic, and interactive*! The project provides a rich set of features and functionalities for generating interactive tokens, incorporating dynamic metadata, and creating visually engaging on-chain visuals. It offers a user-friendly interface and extensive documentation to simplify the development process and enable seamless integration with existing blockchain platforms and token standards.
+**OnChainVision** is a comprehensive suite of libraries, tools, and frameworks that empower developers/creators to design and develop next-generation on-chain assets, that is *visually appealing, dynamic, and interactive*! The project provides a rich set of features and functionalities for generating interactive tokens, incorporating dynamic metadata, and creating visually engaging on-chain visuals. Its offers a user-friendly interface and extensive documentation to simplify the development process and enable seamless integration with existing blockchain platforms and token standards.
 
 ## Our Goals
 
