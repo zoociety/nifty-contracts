@@ -32,7 +32,7 @@ Follow these steps to start using OCVG in your hardhat project:
 
 - Install the package `npm install @zoociety/nifty-contracts`.
 
-- Import the OCVG Library `import "@zoociety/nifty-contracts/libraries/OCVG.sol"`.
+- Import the OCVG Library `import "@zoociety/nifty-contracts/contracts/onchainvision/libraries/OCVG.sol";`.
 
 - Begin creating your on-chain visual graphic design with the provided functions and tools.
 
@@ -41,7 +41,7 @@ Follow these steps to start using OCVG in your hardhat project:
 Example: Creating a vector image with centered text on green background with "Hello, OCVG" title
 
 ```bash
-import "@zoociety/nifty-contracts/libraries/OCVG.sol";
+import "@zoociety/nifty-contracts/contracts/onchainvision/libraries/OCVG.sol";
 
 contract OnchainVisualNFT {
 
