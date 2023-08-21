@@ -65,7 +65,7 @@ library OCVG {
         string memory background
     ) internal pure returns (string memory) {
         string memory dim = Strings.toString(dimension);
-        string memory fill;
+
         return
             string(
                 abi.encodePacked(
